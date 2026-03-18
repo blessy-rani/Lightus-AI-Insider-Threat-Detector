@@ -1,0 +1,25 @@
+Lightus-AI-Insider-Threat-Detector/
+│
+├── 📁 src/
+│   ├── parser.py          # Main parser - coordinates everything
+│   ├── llm_agent.py       # Claude AI integration with MITRE context
+│   └── s3_client.py       # S3 operations for log download
+│
+├── 📁 terraform/           # Infrastructure as code (optional)
+│   └── main.tf            # Creates EC2, S3, IAM, CloudTrail
+│
+├── 📁 tests/               # Unit tests
+│   └── test_parser.py
+│
+├── 📁 docs/                # Documentation
+│   └── architecture.md
+│
+├── 📁 scripts/             # Utility scripts
+│   └── run.sh
+│
+├── 📁 screenshots/         # Demo screenshots
+│   └── placeholder.txt
+│
+├── requirements.txt        # Python dependencies
+├── README.md               # This file
+└── .gitignore              # Git ignore rules
