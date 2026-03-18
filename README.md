@@ -87,6 +87,47 @@ Alerts are classified into severity levels and triggered based on risk.
 
 This ensures the system operates in **true stealth mode**.
 
+
+---
+**Security & Design Alignment
+🏗️ AWS Well-Architected Design Principles**
+
+This system is designed following AWS Well-Architected principles to ensure scalability, efficiency, and resilience:
+
+Data-driven architecture-Uses baseline profiling and anomaly detection instead of static rules.
+Evolutionary design-Built in phases (Detection → Response), allowing controlled expansion.
+Automation-first approach-Infrastructure provisioning and log analysis are automated.
+Real-world validation-Processes actual CloudTrail logs instead of simulated datasets.
+
+🛡️ **AWS Security Pillars Mapping**
+
+The system aligns with AWS Security best practices across key domains:
+
+**Identity & Access Management**
+Least privilege IAM roles assigned to EC2
+Detection of abnormal IAM activities (e.g., access key creation)
+Monitoring of privileged account usage
+
+**Detection**
+Continuous ingestion of CloudTrail logs
+Baseline-based anomaly filtering
+LLM-based behavioral reasoning mapped to MITRE ATT&CK
+
+**Infrastructure Protection**
+Controlled EC2 environment with scoped permissions
+Restricted S3 access for log retrieval
+No unnecessary external exposure
+
+**Data Protection**
+Avoids storing full logs; only metadata is retained
+Secure access patterns for CloudTrail logs
+Minimizes data duplication
+
+**Incident Response**
+Alert classification (Low / Medium / High / Critical)
+Immediate alerts for high-risk behavior
+Behavioral tagging for repeated suspicious actions
+
 ---
 
 ## 🚀 Tech Stack
